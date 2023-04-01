@@ -23,8 +23,7 @@
       "header": "",
       "format": "json",
       "useJwt": true,
-      "timeout": 10000,
-      "script": "try { \n  // Write('oiiii') \n} catch (ex) { \n  // handle exceptions \n}"
+      "timeout": 10000
     }
   },
   "configurationArguments": {
@@ -60,7 +59,11 @@
   "schema": {
     "arguments": {
       "execute": {
-        "inArguments": [],
+        "inArguments": [
+          {
+            "Email_Address": "{{Contact.Attribute.PostcardJourney.Email_Address}}"
+          }
+        ],
         "outArguments": []
       }
     }
