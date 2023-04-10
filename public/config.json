@@ -1,59 +1,59 @@
 {
   "workflowApiVersion": "1.1",
   "metaData": {
-    "icon": "images/icon.png",
-    "iconSmall": "images/iconSmall.png",
+    "icon": "images/sms.png",
     "category": "message"
   },
   "type": "REST",
   "lang": {
     "en-US": {
-      "name": "Template",
-      "description": "A Template for a custom Journey Builder activity",
-      "step1Label": "Configure Activity"
+      "name": "REST Activity (Workflow API v1.1)",
+      "description": "An example REST activity using workflow API v1.1 format."
     }
   },
   "arguments": {
     "execute": {
-      "inArguments": [],
-      "outArguments": [],
-      "url": "https://starlit-youtiao-16e1a4.netlify.app/journeybuilder/execute",
-      "verb": "POST",
-      "body": "",
-      "header": "",
-      "format": "json",
-      "useJwt": true,
-      "timeout": 10000
+      "inArguments": [
+        {
+          "emailAddress": "{{InteractionDefaults.Email}}"
+        },
+        {
+          "phoneNumber": "{{Contact.Default.PhoneNumber}}"
+        }
+      ],
+      "outArguments": [
+        {
+          "foundSignupDate": ""
+        }
+      ],
+      "url": "https://starlit-youtiao-16e1a4.netlify.app/execute"
     }
   },
   "configurationArguments": {
     "save": {
-      "url": "https://starlit-youtiao-16e1a4.netlify.app/journeybuilder/save",
-      "verb": "POST",
-      "useJwt": true
+      "url": "https://starlit-youtiao-16e1a4.netlify.app/journeybuilder/save"
     },
     "publish": {
-      "url": "https://starlit-youtiao-16e1a4.netlify.app/journeybuilder/publish",
-      "verb": "POST",
-      "useJwt": true
-    },
-    "stop": {
-      "url": "https://starlit-youtiao-16e1a4.netlify.app/journeybuilder/stop",
-      "verb": "POST",
-      "useJwt": true
+      "url": "https://starlit-youtiao-16e1a4.netlify.app/journeybuilder/publish"
     },
     "validate": {
-      "url": "https://starlit-youtiao-16e1a4.netlify.app/journeybuilder/validate",
-      "verb": "POST",
-      "useJwt": true
+      "url": "https://starlit-youtiao-16e1a4.netlify.app/journeybuilder/validate"
+    },
+    "stop": {
+      "url": "https://starlit-youtiao-16e1a4.netlify.app/journeybuilder/stop"
     }
   },
-  "wizardSteps": [{ "label": "Configure Activity", "key": "step1" }],
+  "wizardSteps": [
+    { "label": "Step 1", "key": "step1" },
+    { "label": "Step 2", "key": "step2" },
+    { "label": "Step 3", "key": "step3" },
+    { "label": "Step 4", "key": "step4", "active": false }
+  ],
   "userInterfaces": {
     "configModal": {
-      "height": 400,
-      "width": 1000,
-      "fullscreen": false
+      "height": 200,
+      "width": 300,
+      "fullscreen": true
     }
   },
   "schema": {
@@ -61,10 +61,29 @@
       "execute": {
         "inArguments": [
           {
-            "Email_Address": "{{Contact.Attribute.PostcardJourney.Email_Address}}"
+            "phoneNumber": {
+              "dataType": "Phone",
+              "isNullable": false,
+              "direction": "in"
+            }
+          },
+          {
+            "emailAddress": {
+              "dataType": "Email",
+              "isNullable": false,
+              "direction": "in"
+            }
           }
         ],
-        "outArguments": []
+        "outArguments": [
+          {
+            "foundSignupDate": {
+              "dataType": "Date",
+              "direction": "out",
+              "access": "visible"
+            }
+          }
+        ]
       }
     }
   }
