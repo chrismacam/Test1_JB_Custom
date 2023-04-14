@@ -1,17 +1,16 @@
 {
-  "name": "jb-activity-template",
+  "name": "automating-mc-jbca",
   "version": "1.0.0",
-  "description": "Journey Builder Activity Template",
+  "description": "Automating Marketing Cloud Journey Builder Activity",
   "engines": {
     "node": "6.11.1"
   },
   "scripts": {
-    "start": "node app.js",
-    "postinstall": "gulp default"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/devsutd/journey-builder-activity-template.git"
+    "url": "git+https://git.heroku.com/automating-mc-jbca.git"
   },
   "keywords": [
     "journey",
@@ -19,24 +18,19 @@
     "salesforce marketing cloud",
     "heroku"
   ],
-  "author": "Devs United",
+  "author": "Jason Hanshaw",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/devsutd/journey-builder-activity-template/issues"
+    "url": "https://git.heroku.com/automating-mc-jbca.git"
   },
-  "homepage": "https://github.com/devsutd/journey-builder-activity-template#readme",
+  "homepage": "https://git.heroku.com/automating-mc-jbca.git",
   "dependencies": {
-    "@salesforce-ux/design-system": "^2.14.2",
     "body-parser": "^1.18.2",
-    "gulp-json-modify": "^1.0.2",
-    "gulp-sourcemaps": "^3.0.0",
+    "bower": "^1.8.0",
     "errorhandler": "^1.5.0",
     "express": "^4.15.4",
     "jsonwebtoken": "^8.0.1",
     "request": "^2.81.0",
     "require": "^2.4.20"
-  },
-  "devDependencies": {
-    "gulp": "^4.0.2"
   }
 }
