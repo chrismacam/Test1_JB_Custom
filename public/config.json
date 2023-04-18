@@ -17,7 +17,7 @@
     "execute": {
       "inArguments": [{ "subscriberKey": "{{Contact.Key}}" }],
       "outArguments": [],
-      "url": "https://starlit-youtiao-16e1a4.netlify.app/journeybuilder/execute",
+      "url": "https://customactivitytest.herokuapp.com/journeybuilder/execute",
       "verb": "POST",
       "body": "",
       "header": "",
@@ -30,22 +30,22 @@
   },
   "configurationArguments": {
     "save": {
-      "url": "https://starlit-youtiao-16e1a4.netlify.app/journeybuilder/save",
+      "url": "https://customactivitytest.herokuapp.com/journeybuilder/save",
       "verb": "POST",
       "useJwt": true
     },
     "publish": {
-      "url": "https://starlit-youtiao-16e1a4.netlify.app/journeybuilder/publish",
+      "url": "https://customactivitytest.herokuapp.com/journeybuilder/publish",
       "verb": "POST",
       "useJwt": true
     },
     "stop": {
-      "url": "https://starlit-youtiao-16e1a4.netlify.app/journeybuilder/stop",
+      "url": "https://customactivitytest.herokuapp.com/journeybuilder/stop",
       "verb": "POST",
       "useJwt": true
     },
     "validate": {
-      "url": "https://starlit-youtiao-16e1a4.netlify.app/journeybuilder/validate",
+      "url": "https://customactivitytest.herokuapp.com/journeybuilder/validate",
       "verb": "POST",
       "useJwt": true
     }
