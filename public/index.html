@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="js/require.js"></script>
     <script type="text/javascript">
         (function() {
@@ -21,11 +20,6 @@
 
             require(config, dependencies);
         })();
-        function displayDuplicates(count) {
-                $('#duplicateCount').text(count);
-            }
-
-
     </script>
 </head>
 <body>
@@ -42,7 +36,7 @@
                         <div class="fadeIn first">
                             <img src="images/iconLarge.png" id="icon" alt="Icon" />
                         </div>
-                        <h1>Duplicate Email Addresses: <span id="duplicateCount"></span></h1>
+
                         <!-- CloudPage Form -->
                         <form>
                             <input type="text" id="cpURL" class="fadeIn second" name="cpURL" placeholder="CloudPage URL">
