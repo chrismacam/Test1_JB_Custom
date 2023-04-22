@@ -20,7 +20,7 @@ define([
         connection.trigger('ready');
         connection.trigger("requestTokens");
     }
-
+ 
     function initialize(data) {
         if (data) {
             payload = data;``
@@ -32,7 +32,7 @@ define([
     function save() {
         var cpURL = $('#cpURL').val();
         payload['arguments'].execute.inArguments = [{
-            "subscriberKey": "{{Contact.Key}}",
+            "subscriberKey": "{{Contact.Attribute.DEColumn}}",
             "cloudpageURL": cpURL
         }];
         payload['metaData'].isConfigured = true;
