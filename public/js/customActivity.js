@@ -53,7 +53,10 @@ define([
       
           displayDuplicates(duplicateCount);
         }
-        
+        function displayDuplicates(count) {
+  $('#duplicateCount').text(count);
+}
+
 
     function initialize(data) {
         if (data) {
