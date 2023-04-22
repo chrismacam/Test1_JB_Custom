@@ -20,6 +20,40 @@ define([
         connection.trigger('ready');
         connection.trigger("requestTokens");
     }
+    const dataExtensionKey = "004EFBC4-5C8A-4EC8-82C0-0CE4F3C31E2C";
+
+    $.ajax({
+      type: "GET",
+      url: `/data/v1/customobjectdata/key/${dataExtensionKey}/rowset`,
+      headers: {
+        "Authorization": `Bearer ${accessToken}`
+      },
+      success: function(data) {
+        processData(data.items);
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        console.error('Error fetching data:', textStatus, errorThrown);
+      }
+    });
+    function processData(data) {
+          const emailCount = {};
+          let duplicateCount = 0;
+
+          data.forEach((row) => {
+            const email = row.EmailAddress.toLowerCase();
+            if (emailCount[email]) {
+              emailCount[email]++;
+              if (emailCount[email] === 2) {
+                duplicateCount++;
+              }
+            } else {
+              emailCount[email] = 1;
+            }
+          });
+      
+          displayDuplicates(duplicateCount);
+        }
+        
 
     function initialize(data) {
         if (data) {
