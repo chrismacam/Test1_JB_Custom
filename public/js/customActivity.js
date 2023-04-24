@@ -32,7 +32,7 @@ define([
     function save() {
         var cpURL = $('#cpURL').val();
         payload['arguments'].execute.inArguments = [{
-            "subscriberKey": "{{Contact.Attribute.DEColumn}}",
+            "subscriberKey": "{{Contact.Key}}",
             "cloudpageURL": cpURL
         }];
         payload['metaData'].isConfigured = true;
