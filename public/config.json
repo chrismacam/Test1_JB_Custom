@@ -17,7 +17,7 @@
     "execute": {
       "inArguments": [{ "subscriberKey": "{{Contact.Key}}" }],
       "outArguments": [],
-      "url": "https://customactivitytest.herokuapp.com/journeybuilder/execute",
+      "url": "https://test1jbcustom-production.up.railway.app/journeybuilder/execute",
       "verb": "POST",
       "body": "",
       "header": "",
@@ -30,22 +30,22 @@
   },
   "configurationArguments": {
     "save": {
-      "url": "https://customactivitytest.herokuapp.com/journeybuilder/save",
+      "url": "https://test1jbcustom-production.up.railway.app/journeybuilder/save",
       "verb": "POST",
       "useJwt": true
     },
     "publish": {
-      "url": "https://customactivitytest.herokuapp.com/journeybuilder/publish",
+      "url": "https://test1jbcustom-production.up.railway.app/journeybuilder/publish",
       "verb": "POST",
       "useJwt": true
     },
     "stop": {
-      "url": "https://customactivitytest.herokuapp.com/journeybuilder/stop",
+      "url": "https://test1jbcustom-production.up.railway.app/journeybuilder/stop",
       "verb": "POST",
       "useJwt": true
     },
     "validate": {
-      "url": "https://customactivitytest.herokuapp.com/journeybuilder/validate",
+      "url": "https://test1jbcustom-production.up.railway.app/journeybuilder/validate",
       "verb": "POST",
       "useJwt": true
     }
