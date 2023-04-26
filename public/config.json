@@ -17,7 +17,7 @@
     "execute": {
       "inArguments": [{ "subscriberKey": "{{Contact.Key}}" }],
       "outArguments": [],
-      "url": "https://test1jbcustom-production.up.railway.app/journeybuilder/execute",
+      "url": "https://test1jbcustom-production-6c65.up.railway.app/journeybuilder/execute",
       "verb": "POST",
       "body": "",
       "header": "",
@@ -30,22 +30,22 @@
   },
   "configurationArguments": {
     "save": {
-      "url": "https://test1jbcustom-production.up.railway.app/journeybuilder/save",
+      "url": "https://test1jbcustom-production-6c65.up.railway.app/journeybuilder/save",
       "verb": "POST",
       "useJwt": true
     },
     "publish": {
-      "url": "https://test1jbcustom-production.up.railway.app/journeybuilder/publish",
+      "url": "https://test1jbcustom-production-6c65.up.railway.app/journeybuilder/publish",
       "verb": "POST",
       "useJwt": true
     },
     "stop": {
-      "url": "https://test1jbcustom-production.up.railway.app/journeybuilder/stop",
+      "url": "https://test1jbcustom-production-6c65.up.railway.app/journeybuilder/stop",
       "verb": "POST",
       "useJwt": true
     },
     "validate": {
-      "url": "https://test1jbcustom-production.up.railway.app/journeybuilder/validate",
+      "url": "https://test1jbcustom-production-6c65.up.railway.app/journeybuilder/validate",
       "verb": "POST",
       "useJwt": true
     }
